@@ -124,5 +124,12 @@ namespace Sistema.Presentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario frm = new FrmUsuario();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
