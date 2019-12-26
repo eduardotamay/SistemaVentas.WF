@@ -16,7 +16,8 @@ namespace Sistema.Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FMRPrincipal());
+            //Application.Run(new FMRPrincipal());
+            Application.Run(new Frmlogin());
         }
     }
 }
