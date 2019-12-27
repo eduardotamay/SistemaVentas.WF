@@ -142,7 +142,13 @@ namespace Sistema.Presentacion
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult Option;
+            Option = MessageBox.Show("¿Está seguro de que desea salir?", "Cerrar sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (Option == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void FMRPrincipal_Load(object sender, EventArgs e)
@@ -198,12 +204,7 @@ namespace Sistema.Presentacion
 
         private void FMRPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult Option;
-            Option = MessageBox.Show("¿Está seguro de que desea salir?","Cerrar sistema",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-            if (Option.Equals("OK"))
-            {
-                Application.Exit();
-            }
+            Application.Exit();
         }
     }
 }
