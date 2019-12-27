@@ -206,5 +206,12 @@ namespace Sistema.Presentacion
         {
             Application.Exit();
         }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProveedor frm = new FrmProveedor();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
