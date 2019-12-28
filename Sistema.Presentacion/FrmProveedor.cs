@@ -173,7 +173,7 @@ namespace Sistema.Presentacion
         }
 
         private void DgvListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        { 
             if (e.ColumnIndex == DgvListado.Columns["Seleccionar"].Index)
             {
                 DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)DgvListado.Rows[e.RowIndex].Cells["Seleccionar"];
