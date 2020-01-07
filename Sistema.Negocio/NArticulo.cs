@@ -22,6 +22,11 @@ namespace Sistema.Negocio
             DArticulo Datos = new DArticulo();
             return Datos.Buscar(Valor);
         }
+        public static DataTable BuscarCodigo(string Valor)
+        {
+            DArticulo Datos = new DArticulo();
+            return Datos.BuscarCodigo(Valor);
+        }
         public static string Insertar(int IdCategoria, string Codigo, string Nombre, decimal PrecioVenta, int Stock, string Descripcion, string Imagen)
         {
             DArticulo Datos = new DArticulo();

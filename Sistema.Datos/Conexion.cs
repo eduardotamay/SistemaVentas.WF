@@ -19,8 +19,8 @@ namespace Sistema.Datos
 
         public Conexion()
         {
-            this.Base = "SistemaV";
-            this.Servidor = "CPU256\\TAMAYCJ";
+            this.Base = "dbsistema";
+            this.Servidor = "CPU256";
             this.Usuario = "tamaycj";
             this.Clave = "";
             this.Seguridad = true;

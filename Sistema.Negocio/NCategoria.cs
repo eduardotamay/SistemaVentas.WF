@@ -38,6 +38,7 @@ namespace Sistema.Negocio
             }
             else
             {
+                
                 Categoria Obj = new Categoria();
                 Obj.Nombre = Nombre;
                 Obj.Descripcion = Descripcion;
