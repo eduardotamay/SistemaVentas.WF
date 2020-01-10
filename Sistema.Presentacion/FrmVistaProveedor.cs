@@ -15,7 +15,7 @@ namespace Sistema.Presentacion
         {
             try
             {
-                DgvListado.DataSource = NIngreso.Listar();
+                DgvListado.DataSource = NPersona.Listar();
                 this.Formato();
                 LblTotal.Text = "Total de registros: " + Convert.ToString(DgvListado.Rows.Count);
             }
@@ -29,7 +29,7 @@ namespace Sistema.Presentacion
         {
             try
             {
-                DgvListado.DataSource = NIngreso.Buscar(TxtBuscar.Text);
+                DgvListado.DataSource = NPersona.Buscar(TxtBuscar.Text);
                 this.Formato();
                 LblTotal.Text = "Total de registros: " + Convert.ToString(DgvListado.Rows.Count);
             }
@@ -42,21 +42,19 @@ namespace Sistema.Presentacion
         private void Formato()
         {
             DgvListado.Columns[0].Visible = false;
-            DgvListado.Columns[1].Visible = false;
-            DgvListado.Columns[2].Visible = false;
-            DgvListado.Columns[0].Width = 100;
-            DgvListado.Columns[3].Width = 150;
-            DgvListado.Columns[4].Width = 150;
+            DgvListado.Columns[1].Width = 50;
+            DgvListado.Columns[2].Width = 100;
+            DgvListado.Columns[2].HeaderText = "Tipo Persona";
+            DgvListado.Columns[3].Width = 170;
+            DgvListado.Columns[4].Width = 100;
+            DgvListado.Columns[4].HeaderText = "Documento";
             DgvListado.Columns[5].Width = 100;
-            DgvListado.Columns[5].HeaderText = "Documento";
-            DgvListado.Columns[6].Width = 70;
-            DgvListado.Columns[6].HeaderText = "Serie";
-            DgvListado.Columns[7].Width = 70;
-            DgvListado.Columns[7].HeaderText = "Número";
-            DgvListado.Columns[8].Width = 60;
-            DgvListado.Columns[9].Width = 100;
-            DgvListado.Columns[10].Width = 100;
-            DgvListado.Columns[11].Width = 100;
+            DgvListado.Columns[5].HeaderText = "Número Doc";
+            DgvListado.Columns[6].Width = 60;
+            DgvListado.Columns[6].HeaderText = "Dirección";
+            DgvListado.Columns[7].Width = 100;
+            DgvListado.Columns[7].HeaderText = "Teléfono";
+            DgvListado.Columns[8].Width = 100;
         }
 
 

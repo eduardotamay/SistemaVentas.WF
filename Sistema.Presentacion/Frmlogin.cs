@@ -42,6 +42,7 @@ namespace Sistema.Presentacion
                     else
                     {
                         FMRPrincipal frm = new FMRPrincipal();
+                        Variables.IdUsuario = Convert.ToInt32(Tabla.Rows[0][0]);  //Se pasa la variable del usuario logueado
                         frm.IdUsuario = Convert.ToInt32(Tabla.Rows[0][0]);
                         frm.IdRol = Convert.ToInt32(Tabla.Rows[0][1]);
                         frm.Rol = Convert.ToString(Tabla.Rows[0][2]);

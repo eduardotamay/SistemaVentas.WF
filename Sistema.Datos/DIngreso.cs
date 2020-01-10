@@ -57,6 +57,32 @@ namespace Sistema.Datos
                 if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
             }
         }
+        public DataTable ListarDetalle(int Id)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                sqlCon = Conexion.getInstancia().CrearConnexion();
+                SqlCommand comando = new SqlCommand("ingreso_listar_detalle", sqlCon);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.Add("@idingreso", SqlDbType.Int).Value = Id;
+                sqlCon.Open();
+                Resultado = comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw ex;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
+            }
+        }
         public string Insertar(Ingreso Obj)
         {
             string Rpta = "";
@@ -75,7 +101,8 @@ namespace Sistema.Datos
                 comando.Parameters.Add("@total", SqlDbType.Decimal).Value = Obj.Total;
                 comando.Parameters.Add("@detalle", SqlDbType.Structured).Value = Obj.Detalles;
                 sqlCon.Open();
-                Rpta = comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo ingresar el registro";
+                comando.ExecuteNonQuery();
+                Rpta =  "OK" ;
             }
             catch (Exception ex)
             {
@@ -98,7 +125,8 @@ namespace Sistema.Datos
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@idingreso", SqlDbType.Int).Value = Id;
                 sqlCon.Open();
-                Rpta = comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo anular el registro";
+                comando.ExecuteNonQuery();
+                Rpta =  "OK";
             }
             catch (Exception ex)
             {

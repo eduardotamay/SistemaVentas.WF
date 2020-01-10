@@ -22,10 +22,15 @@ namespace Sistema.Negocio
             DIngreso Datos = new DIngreso();
             return Datos.Buscar(Valor);
         }
-        public static string Insertar(int IdProveedor, int IdUsuario, string TipoComprobante, string SerieComprobante, string NumComprobante, decimal Impuesto, decimal Total, DataTable Detalles)
+        public static DataTable ListarDetalle(int Id)
         {
             DIngreso Datos = new DIngreso();
-            
+            return Datos.ListarDetalle(Id);
+        }
+        public static string Insertar(int IdProveedor, int IdUsuario, string TipoComprobante, string SerieComprobante, string NumComprobante, decimal Impuesto, decimal Total, DataTable Detalles)
+        {
+
+                DIngreso Datos = new DIngreso();
                 Ingreso  Obj = new Ingreso();
                 Obj.IdProveedor = IdProveedor;
                 Obj.IdUsuario = IdUsuario;
