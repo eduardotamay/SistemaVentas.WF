@@ -44,6 +44,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DArticulo.cs" />
     <Compile Include="DCategoria.cs" />
+    <Compile Include="DVenta.cs" />
     <Compile Include="DIngreso.cs" />
     <Compile Include="DPersona.cs" />
     <Compile Include="DRol.cs" />

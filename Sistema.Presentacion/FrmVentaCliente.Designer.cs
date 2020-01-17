@@ -1,6 +1,6 @@
 ﻿namespace Sistema.Presentacion
 {
-    partial class FrmVistaProveedor
+    partial class FrmVentaCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.DgvListado = new System.Windows.Forms.DataGridView();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.TabGeneral = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.LblTotal = new System.Windows.Forms.Label();
-            this.DgvListado = new System.Windows.Forms.DataGridView();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).BeginInit();
             this.TabGeneral.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DgvListado
+            // 
+            this.DgvListado.AllowUserToAddRows = false;
+            this.DgvListado.AllowUserToDeleteRows = false;
+            this.DgvListado.AllowUserToOrderColumns = true;
+            this.DgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Seleccionar});
+            this.DgvListado.Location = new System.Drawing.Point(8, 51);
+            this.DgvListado.Name = "DgvListado";
+            this.DgvListado.ReadOnly = true;
+            this.DgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvListado.Size = new System.Drawing.Size(881, 299);
+            this.DgvListado.TabIndex = 0;
+            this.DgvListado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellDoubleClick);
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
             // 
             // TabGeneral
             // 
@@ -47,7 +69,7 @@
             this.TabGeneral.Name = "TabGeneral";
             this.TabGeneral.SelectedIndex = 0;
             this.TabGeneral.Size = new System.Drawing.Size(916, 437);
-            this.TabGeneral.TabIndex = 2;
+            this.TabGeneral.TabIndex = 3;
             // 
             // tabPage1
             // 
@@ -89,54 +111,33 @@
             this.LblTotal.TabIndex = 1;
             this.LblTotal.Text = "Total:";
             // 
-            // DgvListado
-            // 
-            this.DgvListado.AllowUserToAddRows = false;
-            this.DgvListado.AllowUserToDeleteRows = false;
-            this.DgvListado.AllowUserToOrderColumns = true;
-            this.DgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seleccionar});
-            this.DgvListado.Location = new System.Drawing.Point(8, 51);
-            this.DgvListado.Name = "DgvListado";
-            this.DgvListado.ReadOnly = true;
-            this.DgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListado.Size = new System.Drawing.Size(881, 299);
-            this.DgvListado.TabIndex = 0;
-            this.DgvListado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellDoubleClick);
-            // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            // 
-            // FrmVistaProveedor
+            // FrmVentaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 438);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(937, 502);
             this.Controls.Add(this.TabGeneral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FrmVistaProveedor";
-            this.Text = "Seleccione Proveedor";
-            this.Load += new System.EventHandler(this.FrmVistaProveedor_Load);
+            this.Name = "FrmVentaCliente";
+            this.Text = "Seleccione Cliente";
+            this.Load += new System.EventHandler(this.FrmVentaCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).EndInit();
             this.TabGeneral.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView DgvListado;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
         private System.Windows.Forms.TabControl TabGeneral;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.TextBox TxtBuscar;
-        private System.Windows.Forms.DataGridView DgvListado;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
         private System.Windows.Forms.Label LblTotal;
     }
 }

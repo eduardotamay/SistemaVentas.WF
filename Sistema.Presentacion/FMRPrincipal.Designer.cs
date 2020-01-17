@@ -128,14 +128,14 @@
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.proveedoresToolStripMenuItem.Text = "&Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.comprasToolStripMenuItem.Text = "&Compras";
             this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
@@ -196,14 +196,15 @@
             // consultaComprasToolStripMenuItem
             // 
             this.consultaComprasToolStripMenuItem.Name = "consultaComprasToolStripMenuItem";
-            this.consultaComprasToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.consultaComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaComprasToolStripMenuItem.Text = "Consulta Compras";
             // 
             // consultaVentasToolStripMenuItem
             // 
             this.consultaVentasToolStripMenuItem.Name = "consultaVentasToolStripMenuItem";
-            this.consultaVentasToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.consultaVentasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaVentasToolStripMenuItem.Text = "Consulta Ventas";
+            this.consultaVentasToolStripMenuItem.Click += new System.EventHandler(this.consultaVentasToolStripMenuItem_Click);
             // 
             // viewMenu
             // 
